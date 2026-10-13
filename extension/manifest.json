@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "No Incognito",
+  "version": "1.0.0",
+  "description": "Automatically closes incognito windows. Requires Allow in incognito to be enabled in Chrome extension settings.",
+  "minimum_chrome_version": "109",
+  "incognito": "spanning",
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "No Incognito — setup and status",
+    "default_popup": "status.html"
+  },
+  "options_ui": { "page": "status.html", "open_in_tab": true }
+}

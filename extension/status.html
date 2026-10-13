@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>No Incognito</title>
+    <link rel="stylesheet" href="status.css">
+    <script src="status.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header><span class="mark" aria-hidden="true">N<span>ø</span></span><span class="eyebrow">A LITTLE MORE INTENTION</span></header>
+      <h1>No Incognito<span class="dot">.</span></h1>
+      <p class="intro">Keep your browsing in the open.</p>
+      <section class="status" id="status" data-state="loading" aria-live="polite" aria-atomic="true">
+        <span class="indicator" aria-hidden="true"></span>
+        <div><h2 id="status-title">Checking setup…</h2><p id="status-description">Connecting to the extension.</p></div>
+      </section>
+      <section id="setup">
+        <h2>One setting to get started</h2>
+        <ol>
+          <li>Open this extension’s settings.</li>
+          <li>Turn on <strong>Allow in incognito</strong>.</li>
+          <li>Reopen No Incognito to check the status.</li>
+        </ol>
+        <p class="note">This permission lets No Incognito detect and close private windows, including any that are already open. Save anything you need first.</p>
+      </section>
+      <div class="actions">
+        <button id="open-settings" type="button">Open extension settings <span aria-hidden="true">↗</span></button>
+        <button id="check-status" class="secondary" type="button">Check status</button>
+      </div>
+      <details>
+        <summary>What this can and can’t block</summary>
+        <p>Incognito windows close automatically after they open. A window may flash briefly, and a page may start loading before it closes. Chrome’s incognito menu and keyboard shortcut remain available.</p>
+        <p>Disabling this extension or its incognito permission stops the blocking. Other profiles, Guest mode, and other browsers are unaffected.</p>
+        <p>To disable incognito itself, an administrator must set Chrome’s <code>IncognitoModeAvailability</code> policy to <code>1</code>. <a href="https://support.google.com/chrome/a/answer/13130396" target="_blank" rel="noreferrer">Read Google’s policy guide ↗</a></p>
+      </details>
+      <footer>No tracking. No browsing history. Everything stays local.</footer>
+    </main>
+  </body>
+</html>
