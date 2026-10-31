@@ -1,0 +1,26 @@
+NAME
+TopLock-Antincognito
+
+SHORT DESCRIPTION
+Automatically closes incognito windows. Requires Allow in incognito to be enabled in Chrome extension settings.
+
+DETAILED DESCRIPTION
+Stay focused with TopLock-Antincognito, a simple Chrome extension that automatically closes incognito windows after they open.
+
+Add an intentional boundary to your browsing while keeping ordinary Chrome windows open.
+
+HOW TO SET UP
+1. Install TopLock-Antincognito.
+2. Open it from Chrome’s Extensions menu.
+3. Click Open extension settings.
+4. Enable Allow in incognito on the extension’s Details page.
+5. Reopen the extension and look for Automatic closing is on.
+
+Save any work in existing incognito windows before enabling access: those windows will close.
+
+WHAT TO EXPECT
+Incognito windows close after they open. A window may briefly appear, and a page may begin loading before it closes. Ordinary Chrome windows remain open.
+
+Chrome’s incognito menu and keyboard shortcut remain available. Turning off the extension or its incognito access stops automatic closing. Other profiles, Guest mode, and other browsers are unaffected.
+
+Part of TopLock: small tools for more intentional digital habits.

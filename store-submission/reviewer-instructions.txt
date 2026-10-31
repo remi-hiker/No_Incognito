@@ -1,0 +1,26 @@
+Single purpose
+Automatically close incognito windows in the Chrome profile where the user installs the extension and explicitly enables Allow in incognito.
+
+Review steps
+Use a disposable Chrome test profile; save any incognito work first.
+1. Install the extension. Its setup page opens on first installation.
+2. Before granting incognito access, open the extension: it should report Setup required.
+3. Choose Open extension settings and enable Allow in incognito.
+4. Reopen the extension or click Check status. It should report Automatic closing is on.
+5. Open an incognito window. It should close after creation. Normal windows should remain open.
+6. Revoke Allow in incognito and reopen the status page. It should return to Setup required.
+7. Restart Chrome and repeat the enabled-state check.
+
+No account, subscription, credentials, or external service is required.
+The user must enable incognito access manually; the extension cannot grant itself this access.
+This is a voluntary focus tool, not browser-policy enforcement or parental control.
+Incognito windows can briefly appear; this extension does not remove the incognito command.
+
+Implementation
+Manifest V3 service worker; all executable code ships in the package.
+No permissions, optional_permissions, or host_permissions are declared.
+Uses chrome.windows for window lifecycle events, incognito flags and closing windows;
+chrome.extension.isAllowedIncognitoAccess for setup state;
+chrome.action for badge/status; chrome.runtime for internal messages and setup;
+chrome.tabs.create only to open its own Chrome extension settings page.
+It does not require the tabs permission to create that settings tab.
