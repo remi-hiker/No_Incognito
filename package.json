@@ -1,6 +1,6 @@
 {
-  "name": "no-incognito",
-  "version": "1.0.0",
+  "name": "toplock-antincognito",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {

@@ -24,15 +24,15 @@ async function refreshProtection() {
   await chrome.action.setBadgeBackgroundColor({ color: allowed ? '#23694d' : '#9a4b19' });
   await chrome.action.setBadgeText({ text: allowed ? 'ON' : '!' });
   await chrome.action.setTitle({
-    title: allowed ? 'No Incognito — automatic closing enabled' : 'No Incognito — setup required'
+    title: allowed ? 'TopLock-Antincognito — automatic closing enabled' : 'TopLock-Antincognito — setup required'
   });
   return { allowed };
 }
 
 function reportError(error) {
-  console.warn('No Incognito could not complete a window check.', error);
+  console.warn('TopLock-Antincognito could not complete a window check.', error);
   void chrome.action.setBadgeText({ text: '!' }).catch(() => {});
-  void chrome.action.setTitle({ title: 'No Incognito — check status' }).catch(() => {});
+  void chrome.action.setTitle({ title: 'TopLock-Antincognito — check status' }).catch(() => {});
 }
 
 chrome.windows.onCreated.addListener(window => {

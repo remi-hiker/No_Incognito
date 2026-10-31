@@ -35,7 +35,7 @@ document.querySelector('#open-settings').addEventListener('click', async () => {
   try {
     await chrome.tabs.create({ url: `chrome://extensions/?id=${chrome.runtime.id}` });
   } catch {
-    showError('Open chrome://extensions, find No Incognito, then choose Details.');
+    showError('Open chrome://extensions, find TopLock-Antincognito, then choose Details.');
   }
 });
 checkButton.addEventListener('click', checkStatus);
